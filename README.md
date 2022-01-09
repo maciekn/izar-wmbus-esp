@@ -11,6 +11,28 @@ _Note_: While CC1101 chip is versatile and may by configured programatically to 
 
 I was able to use CC1101 board tuned for 433MHz correctly, though ;)
 
+## Usage
+
+```
+IzarWmbus reader;
+
+void setup() {
+    //somewhere in the setup
+    reader.init(0);
+}
+
+
+IzarResultData data;
+
+void loop() {
+    FetchResult result = reader.fetchPacket(&data);
+    if (result == FETCH_SUCCESSFUL) {
+        // we have new package!
+    }
+}
+
+```
+
 
 ## Wiring
 ###  ESP8266
