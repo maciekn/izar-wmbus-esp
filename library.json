@@ -18,6 +18,7 @@
         "espressif8266"
     ],
     "dependencies": {
-        "lsatan/SmartRC-CC1101-Driver-Lib": "^2.5.7"
+        "lsatan/SmartRC-CC1101-Driver-Lib": "^2.5.7",
+        "SPI": "*"
     }
 }
