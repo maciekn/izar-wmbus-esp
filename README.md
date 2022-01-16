@@ -70,6 +70,19 @@ GDN     -> GND
 
 More details about wiring in library this tool is using for connecting with CC1101: https://github.com/LSatan/SmartRC-CC1101-Driver-Lib
 
+### CC1101 868Mhz pinout
+(connectors on the left, ANT on the right)
+
+```
+VCC   -----------------
+GND   |               |
+MOSI  |               |
+SCK   | CC1101        | GND
+MISO  |               | ANT
+GDO2  |               | GND
+GDO0  |     crystal   |
+CSN   |_______________-
+```
 
 ## Building and usage
 The library is based on PlatformIO and is build through PlatformIO's toolchain.
