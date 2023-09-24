@@ -167,12 +167,11 @@ bool IzarWmbus::isSensibleResult(IzarResultData* data) {
         lastResults[data->meterId] = data->waterUsage;
     }
 
-    long int diff = lastResults[data->meterId];
-    diff -= data->waterUsage;
-
-    lastResults[data->meterId] = data->waterUsage;
+    long int diff = data->waterUsage;
+    diff -= lastResults[data->meterId];
 
     if (-SENSIBLE_RESULT_THRESHOLD < diff && diff < SENSIBLE_RESULT_THRESHOLD) {
+        lastResults[data->meterId] = data->waterUsage;
         return true;
     }
 
