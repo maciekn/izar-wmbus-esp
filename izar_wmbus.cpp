@@ -56,6 +56,7 @@ uint8_t decrypted[64] = {0};
 
 inline void dumpHex(uint8_t* data, int len) {
     for (int i = 0; i < len; i++) {
+        if (data[i]<=15)Serial.print("0");  
         Serial.print(data[i], HEX);
         Serial.print(" ");
     }
